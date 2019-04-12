@@ -4,7 +4,7 @@ const scss = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
 const reload = browserSync.reload;
@@ -41,14 +41,14 @@ function vendor() {
     'node_modules/bootstrap/dist/js/bootstrap.js'
   ])
     .pipe(concat('vendors.js'))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(dest('js/'));
 }
 
 function js() {
   return src('assets/js/*.js')
     .pipe(babel())
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(dest('js/'));
 }
 
