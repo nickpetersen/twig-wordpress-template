@@ -1,0 +1,9 @@
+.footer {
+    height: 150px;
+    @extend %flex-center;
+    background-color: $black;
+    .logo {
+        width: 70px;
+        margin: 0 auto;
+    }
+}

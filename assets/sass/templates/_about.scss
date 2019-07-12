@@ -1,0 +1,15 @@
+.about-copy {
+    @extend %flex-center;
+    .floating-text {
+        width: 80%;
+        padding: 4em 0;
+        @include media-breakpoint-up(md){
+            width: 60%;
+          }
+    }
+}
+
+.contained-image {
+    height: 926px;
+    margin: 6em 0;
+}

@@ -54,7 +54,7 @@ function js() {
 
 exports.serve = series(css, images, vendor, js, () => {
   browserSync.init({
-    proxy: 'http://twigdemo.test',
+    proxy: 'http://localhost:8888',
     notify: false
   });
   watch('assets/sass/**/**/*.scss', css);

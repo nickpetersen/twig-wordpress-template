@@ -1,0 +1,97 @@
+.jumbotron {
+    padding: 8em 0;
+    color: white;
+    background: #333;
+    border-radius: 0;
+    text-align: center;
+    &.home-hero {
+      padding: 8em 0;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 0;
+      .message {
+        @include media-breakpoint-up(md){
+          width: 40%;
+        }
+      }
+      .teaser {
+        display: none;
+        @include media-breakpoint-up(md) {
+          display: initial;
+        }
+      }
+      .logo {
+          @extend %flex-center;
+          width: 100%;
+          position: absolute;
+          top: 100px;
+          img {
+              z-index: 1;
+              margin: 0 auto;
+              top: 0;
+          }
+      }
+      .content {
+          z-index: 1;
+          .content-wrapper {
+              padding: 0 2em;
+              @include media-breakpoint-up(md) {
+                padding: 0 4em;
+              }
+          }
+      }
+      
+      video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+      }
+    }
+    &.home-support {
+        padding: 8em 0;
+        height: 750px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        @extend %flex-center;
+        margin-bottom: 0;
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+          }
+    }
+    a { margin-bottom: 1em; }
+    img {
+      max-width: 6em;
+    }
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+
+    .overlay {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+}

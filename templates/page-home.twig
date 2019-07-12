@@ -1,0 +1,65 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="jumbotron home-hero">
+    <div class="logo">
+        <img src="/app/uploads/dev/prizm-logo-white.svg" alt="Prizm Logo">
+    </div>
+    <div class="row content">
+        <div class="col-md-6 offset-md-6">
+            <div class="content-wrapper">
+                <h1>App Controlled RGB or White LED Lighting.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec odio et nunc dapibus placerat.</p>
+                <a href="#" class="btn btn-dark">Call to action</a>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <video playsinline="" autoplay="" muted="" loop="">
+      <source src="/app/uploads/dev/bg-video.mp4" type="video/mp4">
+    </video>
+</div>
+<section>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 about-copy">
+            <div class="prizm-icon">
+                <img src="/app/uploads/dev/prizm-symbol/Prizm Logo_00000.png" alt="Prizm Symbol">
+            </div>
+            <div class="floating-text">
+                <h1>Lorem ipsum sit amet suspendisse nec odio et nunc dapibus placerat.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec odio et nunc dapibus placerat.</p>
+            </div>
+        </div>
+        <div class="col-md-4 contained-image" style="background-image: url('/app/uploads/dev/cabin.jpg');"></div>
+    </div>
+</div>
+</section>
+<section>
+    <div class="jumbotron home-support">
+        <div class="overlay"></div>
+        <div class="z-10 text-center">
+            <h2 class="caps">Lorem Ipsum Sit Amet</h2>
+            <h1 class="caps">Ipsum Lorem Amet Sit</h1>
+            {% include "_includes/play-icon.twig" %}
+        </div>
+        <video playsinline="" autoplay="" muted="" loop="">
+            <source src="/app/uploads/dev/bg-video.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+<section class="half-half">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 image-fill" style="background-image: url('/app/uploads/dev/girls3.jpg');"></div>
+            <div class="col-md-6 color">
+                <div class="content">
+                    <p>social icons here</p>
+                    <h1>Get in touch.</h1>
+                    {{ function('do_shortcode', '[contact-form-7 id="11" title="Contact form"]') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

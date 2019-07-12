@@ -1,0 +1,20 @@
+input[type="text"],input[type="email"],textarea {
+    width: 100%;
+    padding: .7em 0 .7em 1em;
+    font-size: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    @extend %subtle-shadow;
+}
+
+::placeholder {
+    color: $orange;
+    opacity: 1;
+}
+
+input[type="submit"] {
+    &:hover {
+        @extend %subtle-shadow-hover;
+    }
+}

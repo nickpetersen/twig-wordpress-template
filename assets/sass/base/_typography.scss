@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Avenir";
+    src: url("/app/themes/prizm/fonts/Avenir-Black.woff") format("woff"),
+    url("/app/themes/prizm/fonts/Avenir-Black.otf") format("opentype"),
+}
+@font-face {
+    font-family: "Baskerville";
+    src: url("/app/themes/prizm/fonts/Baskerville.woff") format("woff"),
+    url("/app/themes/prizm/fonts/Baskerville.otf") format("opentype"),
+}
+    
+
+h1 {
+    padding-bottom: 30px;
+}
+
+h2 {
+    color: $orange;
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+
+h1,h2,h3,h4,h5,h6,a {
+    font-family: $heading-font;
+}
+
+p,input,textarea {
+    font-family: $body-font;
+}
+
+textarea:focus, input:focus {
+    color: $orange;
+}

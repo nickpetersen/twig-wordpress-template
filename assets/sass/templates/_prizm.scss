@@ -1,0 +1,13 @@
+.prizm-icon {
+    position: absolute;
+    @extend %flex-center;
+    img {
+        z-index: -1;
+        width: 300px;
+        opacity: .3;
+        @include media-breakpoint-up(md) {
+            width: auto;
+            opacity: 1;
+          }
+    }
+}
