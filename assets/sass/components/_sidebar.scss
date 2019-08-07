@@ -1,0 +1,89 @@
+.layout-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    .menu {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        .top {
+            width: 50%;
+            background-color: white;
+            height: 2px;
+            margin-bottom: 5px;
+        }
+        .middle {
+            width: 30%;
+            background-color: white;
+            height: 2px;
+            margin-bottom: 5px;
+        }
+        .bottom {
+            width: 15%;
+            background-color: white;
+            height: 2px;
+        }
+    }
+    .nav {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: -125px;
+        width: 125px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        background-color: $black;
+        transition: right .3s ease;
+        &.show {
+            right: 0;
+        }
+        .nav-items {
+            .title {
+                padding-bottom: 30px;
+                font-weight: 100;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                text-align: center;
+                li {
+                    padding-bottom: 15px;
+                }
+                a {
+                    color: white;
+                    font-weight: normal;
+                }
+            }
+        }
+        .social {
+            position: fixed;
+            bottom: 0;
+            width: 125px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .social-icon {
+                margin-bottom: 20px;
+                width: 30px;
+                height: 30px;
+                    background-color: white;
+            }
+        }
+    }
+    
+}
