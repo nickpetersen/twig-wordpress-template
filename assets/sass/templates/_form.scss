@@ -8,11 +8,6 @@ input[type="text"],input[type="email"],textarea {
     @extend %subtle-shadow;
 }
 
-::placeholder {
-    color: $orange;
-    opacity: 1;
-}
-
 input[type="submit"] {
     &:hover {
         @extend %subtle-shadow-hover;

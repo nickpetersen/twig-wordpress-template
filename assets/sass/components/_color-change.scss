@@ -1,0 +1,163 @@
+.color-changer {
+    position: fixed;
+    margin: 0 auto;
+    bottom: -75px;
+    left: 0;
+    right: 0;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .orbs {
+        transition: transform .3s ease;
+        display: flex;
+        justify-content: center;
+        height: 150px;
+        width: 150px;
+        .orb {
+            transition: border .3s ease;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            border: 0px solid white;
+            &:nth-child(1) {
+                background-color: $first;
+                top: 0;
+            }
+            &:nth-child(2) {
+                background-color: $second;
+                left: 0;
+                top: 50px;
+            }
+            &:nth-child(3) {
+                background-color: $third;
+                bottom: 0;
+            }
+            &:nth-child(4) {
+                background-color: $fourth;
+                right: 0;
+                top: 50px;
+            }
+        }
+    }
+    
+}
+
+.prizm-symbol {
+    position: fixed;
+    bottom: 39px;
+    height: 25px;
+    width: 25px;
+    z-index: 100;
+}
+
+.btn-dark {
+    transition: color .3s ease;
+}
+h2 {
+    transition: color .3s ease;
+}
+circle#Oval {
+    transition: fill .3s ease;
+}
+.color {
+    transition: background-color .3s ease;
+}
+::placeholder {
+    transition: color .3s ease;
+}
+
+body[data-page-active-theme="first"] {
+    .orbs {
+        .orb:nth-child(1) {
+            border: 2px solid white;
+        }
+    }
+    .btn-dark {
+        color: $first;
+    }
+    h2,h3 {
+        color: $first
+    }
+    circle#Oval {
+        fill: $first;
+    }
+    .color {
+        background-color: $first;
+    }
+    ::placeholder {
+        color: $first;
+        opacity: 1;
+    }
+}
+body[data-page-active-theme="second"] {
+    .orbs {
+        .orb:nth-child(2) {
+            border: 2px solid white;
+        }
+    }
+    .btn-dark {
+        color: $second;
+    }
+    h2,h3 {
+        color: $second
+    }
+    circle#Oval {
+        fill: $second;
+    }
+    .color {
+        background-color: $second;
+    }
+    ::placeholder {
+        color: $second;
+        opacity: 1;
+    }
+}
+body[data-page-active-theme="third"] {
+    .orbs {
+        .orb:nth-child(3) {
+            border: 2px solid white;
+        }
+    }
+    .btn-dark {
+        color: $third;
+    }
+    h2,h3 {
+        color: $third
+    }
+    circle#Oval {
+        fill: $third;
+    }
+    .color {
+        background-color: $third;
+    }
+    ::placeholder {
+        color: $third;
+        opacity: 1;
+    }
+}
+body[data-page-active-theme="fourth"] {
+    .orbs {
+        .orb:nth-child(4) {
+            border: 2px solid white;
+        }
+    }
+    .btn-dark {
+        color: $fourth;
+    }
+    h2,h3 {
+        color: $fourth
+    }
+    circle#Oval {
+        fill: $fourth;
+    }
+    .color {
+        background-color: $fourth;
+    }
+    ::placeholder {
+        color: $fourth;
+        opacity: 1;
+    }
+}

@@ -70,3 +70,26 @@ bottomLine.style.width = "15%";
 bottomLine.style.transform = "rotate(0deg)";
 }
 
+// Color Swap
+let timer = setInterval(rotateOrbs, 15000);
+let pageThemes = ['first','second','third','fourth'];
+let activePageThemeIdx = -1;
+let orbs = document.getElementById('orbs');
+let orbRotation = -90;
+let prizmSymbol = document.getElementById('prizmSymbol');
+orbs.addEventListener('click', rotateOrbs);
+prizmSymbol.addEventListener('click', rotateOrbs);
+
+function rotateOrbs() {
+  activePageThemeIdx++;
+  if (activePageThemeIdx >= pageThemes.length) {
+    activePageThemeIdx = 0;
+  }
+  let activeTheme = pageThemes[activePageThemeIdx];
+  document.getElementsByTagName('body')[0].setAttribute('data-page-active-theme', activeTheme);
+  
+  orbRotation += 90;
+  orbs.style.transform = "rotate("+ orbRotation +"deg)";
+
+}
+rotateOrbs();
